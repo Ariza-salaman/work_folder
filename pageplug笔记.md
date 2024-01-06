@@ -174,7 +174,7 @@ convertArrayToOptions:(myArr,n) =>{
 
 ###将对象作为formily表单初始值
 
-![70365834616](\image\1703658346160.png) 
+![70365834616](/image/1703658346160.png) 
 
 ### 配置select组件的动作响应器
 
