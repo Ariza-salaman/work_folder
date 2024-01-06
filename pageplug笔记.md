@@ -112,7 +112,7 @@ where
   AND b.product_brand IN ({{ JSObject1.SetProductBrandOption() }})
 ```
 
-## 数字装换为中文金额大写
+## 数字转换为中文金额大写
 
 ```js
 function numberToChinese(n) {
