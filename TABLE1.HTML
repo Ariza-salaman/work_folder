@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      width: 2030px;
+    }
+
+    table {
+      border-collapse: collapse;
+      margin-top: 10px;
+      background-color: #f5faff;
+      width: auto;
+    }
+
+    table td {
+      border: 1px solid #ffffff;
+      text-align: left;
+    }
+
+    table tr:hover td {
+      background-color: #ccc;
+    }
+  </style>
+</head>
+
+<body>
+  <table>
+  </table>
+
+  <div id="table-container"></div>
+  <script>
+    const arr = [
+      ["销售订单编号", "销售订单名称", "客户名称", "产品名称", "产品编号", "销售数量", "出库数量", "未出库-退货数量", "已出库-退货数量", "总退货数量", "换货数量", "待出库数量", "库存冻结数量", "计划出库数量", "待规划出库数量", "已对账数量", "待对账数量", "应收金额/元", "收款金额/元", "待收款金额/元"],
+      ["XSDD230921-01", "示例：上海帆软-第3份销售订单", "示例：上海帆软", "Catalyst 8300", "CP0003", "50", "50", "0", "0", "0", "0", "0", "0", "0", "0", "0", "50", "0", "0", "0"],
+      ["Dusun Pi4", "CP0004", "50", "50", "0", "0", "0", "0", "0", "0", "0", "0", "0", "50", "0", "0", "0"],
+    ]
+    const tb = document.querySelector('table')
+    let m = 1
+    for (let i = 0; i < arr.length; i++) {
+      const tr = document.createElement('tr')
+      let long = arr[i].length
+      for (let j = 0; j < arr[i].length; j++) {
+        const td = document.createElement('td')
+        td.innerHTML = arr[i][j]
+        tr.append(td)
+      }
+      tb.append(tr)
+      if (long < 20) {
+        m++
+        const tr1 = document.querySelector(`tr:nth-child(${i})`)
+        const tdArr = tr1.children
+        for (let k = 0; k < 20 - long; k++) {
+          tdArr[k].setAttribute('rowspan', m)
+        }
+      }
+    }
+
+    function numberToChinese(n) {
+      var fraction = ['角', '分'];
+      var digit = [
+        '零', '壹', '贰', '叁', '肆',
+        '伍', '陆', '柒', '捌', '玖'
+      ];
+      var unit = [
+        ['元', '万', '亿'],
+        ['', '拾', '佰', '仟']
+      ];
+      var head = n < 0 ? '欠' : '';
+      n = Math.abs(n);
+      var s = '';
+      for (var i = 0; i < fraction.length; i++) {
+        s += (digit[Math.floor(n * 10 * Math.pow(10, i)) % 10] + fraction[i]).replace(/零./, '');
+      }
+      s = s || '整';
+      n = Math.floor(n);
+      for (var i = 0; i < unit[0].length && n > 0; i++) {
+        var p = '';
+        for (var j = 0; j < unit[1].length && n > 0; j++) {
+          p = digit[n % 10] + unit[1][j] + p;
+          n = Math.floor(n / 10);
+        }
+        s = p.replace(/(零.)*零$/, '').replace(/^$/, '零') + unit[0][i] + s;
+      }
+      return head + s.replace(/(零.)*零元/, '元').replace(/(零.)+/g, '零').replace(/^整$/, '零元整');
+    }
+    let number = +prompt('输入')
+    console.log((numberToChinese(number)));
+
+
+
+
+
+  </script>
+</body>
+
+</html>
