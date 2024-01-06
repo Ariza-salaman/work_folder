@@ -174,15 +174,15 @@ convertArrayToOptions:(myArr,n) =>{
 
 ###将对象作为formily表单初始值
 
-![70365834616](C:\Users\cheng.zhou\Documents\markdown\image\1703658346160.png) 
+![70365834616](\image\1703658346160.png) 
 
 ### 配置select组件的动作响应器
 
-![70365840151](C:\Users\cheng.zhou\Documents\markdown\image\1703658401518.png)
+![70365840151](\image\1703658401518.png)
 
 ## formily 表单日期选择框格式设置
 
-![70365862341](C:\Users\cheng.zhou\Documents\markdown\image\1703658623410.png)
+![70365862341](\image\1703658623410.png)
 
 - 如图所示，将选择器类型选为`日期`，然后打开`时间选择`开关，就可以同时先择日期和时间
 
@@ -192,15 +192,15 @@ convertArrayToOptions:(myArr,n) =>{
 
 输入含税单价和税率，自动计算不含税单价等信息
 
-![70373539140](C:\Users\cheng.zhou\Documents\markdown\image\1703735391407.png)
+![70373539140](\image\1703735391407.png)
 
 ### 设置依赖字段
 
-  ![70365916133](C:\Users\cheng.zhou\Documents\markdown\image\1703659161337.png)
+  ![70365916133](\image\1703659161337.png)
 
 ### 处理逻辑
 
-  ![70365964289](C:\Users\cheng.zhou\Documents\markdown\1703659642895.png)
+  ![70365964289](\1703659642895.png)
 
   使用`$effect` 函数用于处理副作用逻辑，接受两个参数，一个箭头函数写逻辑，一个数组写依赖字段。
 
@@ -218,7 +218,7 @@ convertArrayToOptions:(myArr,n) =>{
 
 选择客户编号后，自动填写对应的编码，联系人等信息
 
-![70373518305](C:\Users\cheng.zhou\Documents\markdown\image\1703735183056.png)
+![70373518305](\image\1703735183056.png)
 
 ### 数据获取
 
@@ -259,15 +259,15 @@ convertArrayToOptions:(myArr,n) =>{
 
 ### 将对象设置为表单初始值
 
-![70373560126](C:\Users\cheng.zhou\Documents\markdown\image\1703735601268.png)
+![70373560126](\image\1703735601268.png)
 
 
 
 ### 配置响应器
 
-![70373567469](C:\Users\cheng.zhou\Documents\markdown\image\1703735674696.png)
+![70373567469](\image\1703735674696.png)
 
-![70373574169](C:\Users\cheng.zhou\Documents\markdown\image\1703735741692.png)
+![70373574169](\image\1703735741692.png)
 
 ```js
 $effect(() => {
@@ -293,9 +293,9 @@ $effect(() => {
 
 填写数量和单价自动计算总价
 
-![70373591247](C:\Users\cheng.zhou\Documents\markdown\image\1703735912475.png)
+![70373591247](\image\1703735912475.png)
 
-![70374018324](C:\Users\cheng.zhou\Documents\markdown\image\1703740183241.png)
+![70374018324](\image\1703740183241.png)
 
 ```js
 $effect(() => {
@@ -308,17 +308,17 @@ $effect(() => {
 
 表外统计金额合计
 
-![70374034639](C:\Users\cheng.zhou\Documents\markdown\image\1703740346390.png)
+![70374034639](\image\1703740346390.png)
 
 #### 给整个表一个字段标识
 
-![70374041862](C:\Users\cheng.zhou\Documents\markdown\image\1703740418621.png)
+![70374041862](\image\1703740418621.png)
 
 #### 在给需要求和的字段增加响应器
 
-![70374049930](C:\Users\cheng.zhou\Documents\markdown\image\1703740499301.png)
+![70374049930](\image\1703740499301.png)
 
-![70374057719](C:\Users\cheng.zhou\Documents\markdown\image\1703740577195.png)
+![70374057719](\image\1703740577195.png)
 
 ```js
 $effect(() => {
@@ -336,11 +336,11 @@ $effect(() => {
 
 将出库明细表金额总和与退货明细表金额总和求和
 
-![70374285870](C:\Users\cheng.zhou\Documents\markdown\image\1703742858709.png)
+![70374285870](\image\1703742858709.png)
 
 #### 配置第二张表的求和字段的响应器
 
-![70374296338](C:\Users\cheng.zhou\Documents\markdown\image\1703742963387.png)
+![70374296338](\image\1703742963387.png)
 
 ![70374312532](C:\Users\CHENG~1.ZHO\AppData\Local\Temp\1703743125320.png)
 
@@ -367,21 +367,21 @@ $effect(() => {
 
 #### 将数据作为对象的属性保存到表单初始值里面
 
-![70425867784](C:\Users\cheng.zhou\Documents\markdown\image\1704258677849.png)
+![70425867784](\image\1704258677849.png)
 
 #### 在表单中创建和该属性同名的自增表格
 
-![70425876465](C:\Users\cheng.zhou\Documents\markdown\image\1704258764659.png)
+![70425876465](\image\1704258764659.png)
 
 #### 让表格的字段标识与数据的字段名称一样
 
-![70425883839](C:\Users\cheng.zhou\Documents\markdown\image\1704258838399.png)
+![70425883839](\image\1704258838399.png)
 
-![70425890603](C:\Users\cheng.zhou\Documents\markdown\image\1704258906038.png)
+![70425890603](\image\1704258906038.png)
 
 #### 最终效果
 
-![70425895236](C:\Users\cheng.zhou\Documents\markdown\image\1704258952361.png)
+![70425895236](\image\1704258952361.png)
 
 ## formily 表格中联级选择器(Cascader)数据传入
 
@@ -413,9 +413,9 @@ setCascaderOption: () => {
 
 ## formily自增表格中的选择器选项跟随表外字段变化而变化
 
-![70444006850](C:\Users\cheng.zhou\Documents\markdown\image\1704440068507.png)
+![70444006850](\image\1704440068507.png)
 
-![70444009941](C:\Users\cheng.zhou\Documents\markdown\image\1704440099418.png)
+![70444009941](\image\1704440099418.png)
 
 ```js
 $effect(() => {
@@ -447,9 +447,9 @@ $effect(() => {
 
 ## 自增表格数据跟随表外字段变化
 
-![70444306634](C:\Users\cheng.zhou\Documents\markdown\image\1704443066344.png)
+![70444306634](\image\1704443066344.png)
 
-![70444309485](C:\Users\cheng.zhou\Documents\markdown\image\1704443094855.png)
+![70444309485](\image\1704443094855.png)
 
 ```js
 //给整个表添加响应事件
