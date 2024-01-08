@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>唱片播放器</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    /* body,
+    html {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0;
+    } */
+
+    .player {
+      position: relative;
+      width: 1000px;
+      height: 1000px;
+    }
+
+    .record-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .record-cover {
+      width: 100%;
+      border-radius: 50%;
+    }
+
+    .play-pause-button {
+      position: absolute;
+      width: 200px;
+      cursor: pointer;
+    }
+
+    @keyframes spin {
+      from {
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+
+      to {
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="player" class="player">
+    <img src="./record-player-image.jpg" alt="唱片机" class="player-image">
+    <div id="record-container" class="record-container">
+      <img src="./record-cover-image.jpg" alt="唱片封面" class="record-cover">
+      <img id="play-pause-button" src="./play.png" alt="播放按钮" class="play-pause-button">
+    </div>
+  </div>
+
+  <script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const playPauseButton = document.getElementById('play-pause-button');
+      const recordContainer = document.getElementById('record-container');
+      let isPlaying = false;
+
+      playPauseButton.addEventListener('click', function () {
+        if (isPlaying) {
+          this.src = './play.png'; // 播放图标
+          recordContainer.style.animation = '';
+        } else {
+          this.src = './pause.png'; // 暂停图标
+          recordContainer.style.animation = 'spin 5s linear infinite';
+        }
+        isPlaying = !isPlaying;
+      });
+    });
+
+  </script>
+</body>
+
+</html>
